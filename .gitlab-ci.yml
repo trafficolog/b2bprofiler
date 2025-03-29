@@ -1,0 +1,30 @@
+include:
+  - project: 'utils/utils'
+    ref: main
+    file: '.ci-utils.yml'
+
+stages:
+  - build_and_push
+  - deploy
+
+build and push frontend:
+  only:
+    - main
+  extends: [.docker_init]
+  before_script:
+    - docker build -t $CI_REGISTRY_IMAGE -f Dockerfile.prod .
+  tags:
+    - docker
+    - frontend
+  stage: build_and_push
+  interruptible: true
+  variables:
+    CI_REGISTRY_IMAGE: $CI_PROJECT_PATH
+
+staging:
+  only:
+    - main
+  stage: deploy
+  trigger:
+    project: $CI_PROJECT_NAMESPACE/infra
+    branch: main

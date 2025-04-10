@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "instagram_parsing_tasks",
+  "info": {
+    "singularName": "parsing-task",
+    "pluralName": "parsing-tasks",
+    "displayName": "Instagram Parsing Task"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": false
+    },
+    "content-type-builder": {
+      "visible": false
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "json",
+      "required": false
+    },
+    "hashtags": {
+      "type": "json",
+      "required": false
+    },
+    "limit": {
+      "type": "integer",
+      "default": 10,
+      "min": 1,
+      "max": 100
+    },
+    "schedule": {
+      "type": "string",
+      "default": "0 0 * * *"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "lastRun": {
+      "type": "datetime"
+    },
+    "nextRun": {
+      "type": "datetime"
+    },
+    "profilesCollected": {
+      "type": "integer",
+      "default": 0
+    },
+    "cronJobId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_common_social_links",
+  "info": {
+    "displayName": "Social Links",
+    "icon": "link",
+    "description": "Social media profile links"
+  },
+  "options": {},
+  "attributes": {
+    "twitter": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "telegram": {
+      "type": "string"
+    },
+    "vk": {
+      "type": "string"
+    },
+    "whatsapp": {
+      "type": "string"
+    }
+  }
+}

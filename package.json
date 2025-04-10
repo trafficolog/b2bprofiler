@@ -16,12 +16,16 @@
     "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
-    "@strapi/plugin-cloud": "5.12.1",
-    "@strapi/plugin-users-permissions": "5.12.1",
+    "@strapi/design-system": "^2.0.0-rc.18",
+    "@strapi/plugin-cloud": "5.11.2",
+    "@strapi/plugin-users-permissions": "5.11.2",
     "@strapi/strapi": "5.12.1",
+    "cron-parser": "^5.1.0",
     "fs-extra": "^10.0.0",
     "mime-types": "^2.1.27",
+    "node-cron": "^3.0.3",
     "pg": "8.8.0",
+    "puppeteer": "^24.5.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -29,6 +33,7 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/node-cron": "^3.0.11",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"

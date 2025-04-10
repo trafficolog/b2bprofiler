@@ -1,0 +1,118 @@
+{
+  "kind": "collectionType",
+  "collectionName": "company_profiles",
+  "info": {
+    "singularName": "company-profile",
+    "pluralName": "company-profiles",
+    "displayName": "Company Profile",
+    "description": "Unified company profile data from multiple sources"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "website": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "industry": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry.industry",
+      "inversedBy": "companies"
+    },
+    "businessType": {
+      "type": "enumeration",
+      "enum": ["B2B", "B2C", "B2G", "B2B2C", "Other"]
+    },
+    "foundedYear": {
+      "type": "integer"
+    },
+    "employeesCount": {
+      "type": "integer"
+    },
+    "lastUpdated": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "component",
+      "component": "common.geo-location",
+      "required": false
+    },
+    
+    "instagram": {
+      "type": "component",
+      "component": "social-profiles.instagram-profile",
+      "required": false
+    },
+    
+    "twoGis": {
+      "type": "component",
+      "component": "business-listings.two-gis-profile",
+      "required": false
+    },
+    
+    "avito": {
+      "type": "component",
+      "component": "business-listings.avito-profile",
+      "required": false
+    },
+    
+    "contacts": {
+      "type": "component",
+      "component": "common.contact-person",
+      "repeatable": true
+    },
+    
+    "dataSources": {
+      "type": "json",
+      "required": false
+    }
+  }
+}

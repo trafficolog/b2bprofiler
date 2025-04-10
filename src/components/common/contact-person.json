@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_common_contact_persons",
+  "info": {
+    "displayName": "Contact Person",
+    "icon": "user",
+    "description": "Company contact person"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "social": {
+      "type": "component",
+      "component": "common.social-links",
+      "repeatable": false
+    }
+  }
+}

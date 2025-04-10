@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_business_listings_avito_profiles",
+  "info": {
+    "displayName": "Avito Profile",
+    "icon": "shopping-bag",
+    "description": "Avito business profile data"
+  },
+  "options": {},
+  "attributes": {
+    "profileId": {
+      "type": "string",
+      "required": true
+    },
+    "companyName": {
+      "type": "string"
+    },
+    "profileUrl": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "address": {
+      "type": "string"
+    },
+    "contactPerson": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "activeSince": {
+      "type": "date"
+    },
+    "activeListingsCount": {
+      "type": "integer"
+    },
+    "reviewsCount": {
+      "type": "integer"
+    },
+    "averageRating": {
+      "type": "decimal"
+    },
+    "categories": {
+      "type": "json"
+    },
+    "lastSynced": {
+      "type": "datetime"
+    }
+  }
+}

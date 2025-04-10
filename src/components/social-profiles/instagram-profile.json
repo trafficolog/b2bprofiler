@@ -1,0 +1,69 @@
+{
+  "collectionName": "components_social_profiles_instagram_profiles",
+  "info": {
+    "displayName": "Instagram Profile",
+    "icon": "instagram",
+    "description": "Instagram business profile data"
+  },
+  "options": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "string"
+    },
+    "fullName": {
+      "type": "string"
+    },
+    "followersCount": {
+      "type": "integer"
+    },
+    "followingCount": {
+      "type": "integer"
+    },
+    "postsCount": {
+      "type": "integer"
+    },
+    "isPrivate": {
+      "type": "boolean",
+      "default": false
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    },
+    "biography": {
+      "type": "text"
+    },
+    "externalUrl": {
+      "type": "string"
+    },
+    "profilePicUrl": {
+      "type": "string"
+    },
+    "businessEmail": {
+      "type": "email"
+    },
+    "businessPhoneNumber": {
+      "type": "string"
+    },
+    "isBusinessAccount": {
+      "type": "boolean",
+      "default": false
+    },
+    "businessCategory": {
+      "type": "string"
+    },
+    "lastSynced": {
+      "type": "datetime"
+    },
+    "recentPosts": {
+      "type": "component",
+      "component": "social-profiles.instagram-post",
+      "repeatable": true,
+      "max": 12
+    }
+  }
+}

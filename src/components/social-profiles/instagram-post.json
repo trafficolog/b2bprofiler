@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_social_profiles_instagram_posts",
+  "info": {
+    "displayName": "Instagram Post",
+    "icon": "image",
+    "description": "Instagram post data"
+  },
+  "options": {},
+  "attributes": {
+    "postId": {
+      "type": "string",
+      "required": true
+    },
+    "caption": {
+      "type": "text"
+    },
+    "mediaUrl": {
+      "type": "string"
+    },
+    "permalink": {
+      "type": "string"
+    },
+    "likesCount": {
+      "type": "integer"
+    },
+    "commentsCount": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "mediaType": {
+      "type": "enumeration",
+      "enum": ["IMAGE", "VIDEO", "CAROUSEL_ALBUM"]
+    }
+  }
+}

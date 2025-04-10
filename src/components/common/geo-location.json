@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_common_geo_locations",
+  "info": {
+    "displayName": "Geo Location",
+    "icon": "location-arrow",
+    "description": "Geographic coordinates"
+  },
+  "options": {},
+  "attributes": {
+    "latitude": {
+      "type": "float",
+      "required": true
+    },
+    "longitude": {
+      "type": "float",
+      "required": true
+    }
+  }
+}

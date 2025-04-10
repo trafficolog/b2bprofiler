@@ -7,5 +7,9 @@ export default () => ({
         defaultReplyTo: 'no-reply@research.splat.pro',
       }
     },
-  }
+  },
+  'instagram-scraper': {
+    enabled: true,
+    resolve: './src/plugins/instagram-scraper'
+  },
 });
